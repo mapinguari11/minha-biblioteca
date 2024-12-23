@@ -9,8 +9,6 @@ function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     if (campo) { // Verifica se o elemento existe
         campo.innerHTML = texto;
-    } else {
-        console.error(`Elemento com a tag '${tag}' não encontrado.`);
     }
 }
 
