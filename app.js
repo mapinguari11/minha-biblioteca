@@ -14,7 +14,7 @@ function exibirTextoNaTela(tag, texto) {
 
 function mensagemInicial() {
     exibirTextoNaTela('h1', 'Minha Biblioteca');
-    exibirTextoNaTela('p', 'Boas vindas à sua biblioteca!');
+    exibirTextoNaTela('p', 'Boas vindas à sua Biblioteca!');
     exibirTextoNaTela('h2', 'Estantes');
 }
 
@@ -43,7 +43,7 @@ function addBotaoRemover(callback) {
 function estanteNova() {
     let estante = document.getElementById('shelfName').value.trim(); // Pega nome no input e cria estante nova.
     if (estante === '') {
-        alert('Por favor, digite um nome para a estante.');
+        alert('Por favor, digite um nome para a Estante.');
         return;
     }
 
@@ -65,8 +65,7 @@ function mostrarBiblioteca() {
         itemEstante.textContent = estante.nome;
 
         itemEstante.addEventListener('click', () => {
-            estanteAtual = index; // Atualiza estanteAtual com o índice da estante clicada
-            console.log(`Estante selecionada: ${minhaBiblioteca[estanteAtual].nome}`);
+            estanteAtual = index; // Atualiza estanteAtual com o índice da estante clicada.
             exibirTextoNaTela('h3', minhaBiblioteca[index].nome);
             mostrarEstante(index); // Mostra livros desta estante
             mostrarCampoLivro(); // exibe ou esconde o campo de input fo livro, dependendo se estanteAtual = null ou não.
